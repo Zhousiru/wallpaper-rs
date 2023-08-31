@@ -1,4 +1,4 @@
-use std::{fs, io::Cursor, time::Duration};
+use std::{env, fs, io::Cursor, time::Duration};
 
 fn get_client() -> reqwest::blocking::Client {
     return reqwest::blocking::ClientBuilder::new()
@@ -19,11 +19,8 @@ pub fn download_image(url: &str) -> String {
         .unwrap();
     let format_str = format.extensions_str()[1];
 
-    let path = std::env::current_exe()
-        .unwrap()
-        .parent()
-        .unwrap()
-        .join(format!("tmp-download.{format_str}"))
+    let path = env::temp_dir()
+        .join(format!("wallpaper-rs-download.{format_str}"))
         .to_str()
         .unwrap()
         .to_string();
@@ -35,8 +32,4 @@ pub fn download_image(url: &str) -> String {
 
 pub fn get_text(url: &str) -> String {
     get_client().get(url).send().unwrap().text().unwrap()
-}
-
-pub fn remove_file(path: &str) {
-    fs::remove_file(path).unwrap()
 }

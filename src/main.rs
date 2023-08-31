@@ -46,9 +46,4 @@ pub fn main() {
         }
         other => panic!("Invalid target `{}`", other),
     }
-
-    if use_provider {
-        // Cleanup.
-        downloader::remove_file(&path)
-    }
 }
