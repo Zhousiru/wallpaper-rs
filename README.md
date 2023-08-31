@@ -7,5 +7,21 @@ Both desktop and lockscreen wallpapers are supported.
 ## Usage
 
 ```
-wallpaper-rs <desktop/lockscreen> /path/to/image
+wallpaper-rs <Target> <Image Path>
 ```
+
+### `<Target>`
+
+Where you want to apply the new wallpaper.
+
+**Possible:** `desktop`, `lockscreen`, `both`
+
+### `<Image Path>`
+
+Path to a new wallpaper, or use the built-in wallpaper provider.
+
+**Possible:**
+
+- `/path/to/image.jpg` for local images.
+- `provider:unsplash` for Unsplash editorial images.
+- `provider:unsplash-wallpapers`, `provider:unsplash-3d-renders`, `provider:unsplash-<Topic>` for Unsplash topic images.
