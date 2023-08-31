@@ -1,3 +1,5 @@
+#![cfg_attr(feature = "daemon", windows_subsystem = "windows")]
+
 use std::env;
 
 mod desktop;
@@ -5,7 +7,7 @@ mod downloader;
 mod lockscreen;
 mod provider;
 
-fn main() {
+pub fn main() {
     let args: Vec<String> = env::args().collect();
 
     let target = args
