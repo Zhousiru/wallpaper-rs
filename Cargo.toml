@@ -7,12 +7,12 @@ edition = "2021"
 daemon = []
 
 [dependencies]
-image = "0.24.7"
-regex = "1.9.4"
-reqwest = { version = "0.11", features = ["blocking"] }
+image = "0.25"
+regex = "1.10"
+reqwest = { version = "0.12", features = ["blocking"] }
 
 [dependencies.windows]
-version = "0.51.1"
+version = "0.51"
 features = [
     "Storage",
     "Foundation",
