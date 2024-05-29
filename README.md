@@ -23,7 +23,7 @@ Path to a new wallpaper, or use the built-in wallpaper provider.
 **Possible:**
 
 - `/path/to/image.jpg` for local images.
-- `provider:unsplash` for Unsplash editorial images (No longer available since 2023/10/28).
+- `provider:unsplash` for Unsplash editorial images.
 - `provider:unsplash-wallpapers`, `provider:unsplash-3d-renders`, `provider:unsplash-<Topic>` for Unsplash topic images.
 
 ### HINT

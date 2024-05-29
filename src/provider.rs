@@ -3,7 +3,7 @@ use regex::Regex;
 use crate::downloader;
 
 fn get_unsplash_topic_image_url(html: &str) -> &str {
-    let re = Regex::new(r#"(?mi)<source srcset="(.*?)\?.*?/>"#).unwrap();
+    let re = Regex::new(r#"(?mi)<img srcset="(.*?)\?.*?/>"#).unwrap();
     re.captures(html).unwrap().extract::<1>().1[0]
 }
 
